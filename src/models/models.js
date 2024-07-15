@@ -11,6 +11,14 @@ const agencySchema = new Schema({
         url:String
     },
     logo:String,
+    trip_ref:[{
+        ref: "Trip",
+        type:mongoose.Schema.Types.ObjectId
+    }],
+    trip_ref:[{
+        ref: "Review",
+        type:mongoose.Schema.Types.ObjectId
+    }]
 
 });
 
