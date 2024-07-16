@@ -7,7 +7,7 @@ const agencySchema = new Schema({
     address:String,
     phone:String,
     email:String,
-    url:Strin,
+    url:String,
     logo:String,
     trip_ref:[{
         ref: "Trip",
