@@ -3,14 +3,12 @@ const {Schema , model} = mongoose;
 
 
 const agencySchema = new Schema({
-    name:String,
-    contact:{
-        address:String,
-        phone:String,
-        email:String,
-        url:String
-    },
-    logo:String,
+    name:   String,
+    address:String,
+    phone:  String,
+    email:  String,
+    url:    String,
+    logo:   String,
     trip_ref:[{
         ref: "Trip",
         type:mongoose.Schema.Types.ObjectId
