@@ -4,7 +4,16 @@ const Agency = require('../models/models');
 exports.createAgency = async (req ,res) => {
 
  try {
-      const agency = await  Agency.create(req.body);
+      const agency = await  Agency.create({
+        name: req.body.name,
+        contact: {
+          address: req.body.address,
+          phone: req.body.phone,
+          email: req.body.email,
+          url: req.body.url
+        },
+        logo: req.body.logo
+      });
       res.json({
         status: 200,
         msg:"data received",
