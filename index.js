@@ -10,11 +10,10 @@ const app = express();
 const PORT = process.env.PORT || 4500;
 
 const corsOptions = {
- origin: 'https://agency-front-theta.vercel.app/', // Adjust this to your frontend URL
-  methods: 'GET,POST,PUT,DELETE',
+ origin: ['https://agency-front-theta.vercel.app/','localhost:3000' ],// Adjust this to your frontend URL
  optionSuccessStatus: 200,
 };
-
+ap.use(cors());
 app.use(cors(corsOptions));
 
 app.use(express.json());
