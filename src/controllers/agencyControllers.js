@@ -5,14 +5,12 @@ exports.createAgency = async (req ,res) => {
 
  try {
       const agency = await  Agency.create({
-          name: req.body.name,
-      contact: {
+        name: req.body.name,
         address: req.body.address,
         phone: req.body.phone,
         email: req.body.email,
-        url: req.body.url
-      },
-      logo: req.body.logo
+        url: req.body.url,
+        logo: req.body.logo
       });
       res.json({
         status: 200,

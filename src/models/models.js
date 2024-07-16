@@ -4,12 +4,10 @@ const {Schema , model} = mongoose;
 
 const agencySchema = new Schema({
     name:String,
-    contact:{
-        address:String,
-        phone:String,
-        email:String,
-        url:String
-    },
+    address:String,
+    phone:String,
+    email:String,
+    url:Strin,
     logo:String,
     trip_ref:[{
         ref: "Trip",
