@@ -9,13 +9,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4500;
 
-const corsOptions = {
- origin: 'https://agency-front-theta.vercel.app/', // Adjust this to your frontend URL
-  methods: '*',
- optionSuccessStatus: 200,
-};
-ap.use(cors());
-app.use(cors(corsOptions));
+
+app.use(cors({
+  origin: ['https://agency-front-theta.vercel.app','https://localhost:3000'],
+  credentials: true
+}));
+
 
 app.use(express.json());
 app.use(morgan("dev"));
