@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4500;
 
 
 app.use(cors({
-  origin: ['https://agency-front-theta.vercel.app','https://localhost:3000'],
+  origin: ['https://agency-front-theta.vercel.app','http://localhost:3000'],
   credentials: true
 }));
 
