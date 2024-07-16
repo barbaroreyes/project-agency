@@ -3,7 +3,7 @@ const {Schema , model} = mongoose;
 
 
 const agencySchema = new Schema({
-    name:"String",
+    name:String,
     contact:{
         address:String,
         phone:String,
